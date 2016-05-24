@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="next_button">next</string>
+    <string name="question_ocean">the pacific ocean is larger than the atlantic ocean</string>
+    <string name="question_mideast">the suez canal connects the red sea and indian ocean</string>
+    <string name="action_search">search</string>
+    <string name="action_setting">setting</string>
+    <string name="warning_text_view">警告:真要看答案吗?</string>
+    <string name="show_answer_button">查看答案</string>
+    <string name="cheat_button">我要看答案</string>
+</resources>

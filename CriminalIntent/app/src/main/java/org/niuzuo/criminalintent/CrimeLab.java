@@ -3,6 +3,9 @@ package org.niuzuo.criminalintent;
 import android.content.Context;
 import android.util.Log;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -56,6 +59,10 @@ public class CrimeLab {
     }
     public void addCrime(Crime c) {
         mCrimes.add(c);
+    }
+    public void deleteCrime(Crime c) throws IOException, JSONException {
+        mCrimes.remove(c);
+        mSerializer.saveCrimes(mCrimes);
     }
 
     public boolean saveCrimes() {

@@ -20,22 +20,29 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import java.util.Date;
 import java.util.UUID;
 
+import android.graphics.drawable.BitmapDrawable;
 /**
  * Created by zdns on 16/5/9.
  */
 public class CrimeFragment extends Fragment {
+    private static final String TAG = "CrimeFragment";
     public static final String EXTRA_CRIME_ID = "org.niuzuo.criminalintent.crime_id";
     private static final String DIALOG_DATE = "date";
     private static final int REQUEST_DATE = 0;
+    private static final int REQUEST_PHOTO = 1;
+    private static final String DIALOG_IMAGE= "image";
+
     private Crime mCrime;
     private EditText mTitleField;
     private Button mDateButton;
     private CheckBox mSolvedCheckBox;
     private ImageButton mPhotoButton;
+    private ImageView mPhotoView;
 
     public static CrimeFragment newInstance(UUID crimeId) {
         Bundle args = new Bundle();
@@ -108,13 +115,26 @@ public class CrimeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), CrimeCameraActivity.class);
-                startActivity(i);
+                startActivityForResult(i, REQUEST_PHOTO);
             }
         });
         PackageManager pm = getActivity().getPackageManager();
         if (!pm.hasSystemFeature(PackageManager.FEATURE_CAMERA) && !pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT)) {
             mPhotoButton.setEnabled(false);
         }
+
+        mPhotoView = (ImageView) v.findViewById(R.id.crime_imageView);
+        mPhotoView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Photo p = mCrime.getmPhoto();
+                if (p == null) {
+                    return;
+                }
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                String path = getActivity().getFileStreamPath(p.getFilename()).getAbsolutePath();
+                ImageFragment.createInstance(path).show(fm, DIALOG_IMAGE);
+            }
+        });
         return v;
     }
 
@@ -125,6 +145,15 @@ public class CrimeFragment extends Fragment {
             Date date = (Date)data.getSerializableExtra(DatePickeFragment.EXTRA_DATE);
             mCrime.setmDate(date);
             mDateButton.setText(mCrime.getmDate().toString());
+        } else if (requestCode == REQUEST_PHOTO) {
+            String filename = data.getStringExtra(CrimeCameraFragment.EXTRA_PHOTO_FILENAME);
+            if (filename != null) {
+                Log.i(TAG, "filename " + filename);
+                Photo p = new Photo(filename);
+                mCrime.setmPhoto(p);
+                showPhoto();
+                Log.i(TAG, "crime " + mCrime.getmTitle()+ " has a photo");
+            }
         }
     }
 
@@ -145,5 +174,29 @@ public class CrimeFragment extends Fragment {
     public void onPause() {
         super.onPause();
         CrimeLab.get(getActivity()).saveCrimes();
+    }
+
+    private void showPhoto() {
+        // (re)set the image button's image based on our photo
+        Photo p = mCrime.getmPhoto();
+        BitmapDrawable b = null;
+        if (p != null) {
+            String path = getActivity()
+                    .getFileStreamPath(p.getFilename()).getAbsolutePath();
+            b = PictureUtils.getScaledDrawable(getActivity(), path);
+        }
+        mPhotoView.setImageDrawable(b);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        showPhoto();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        PictureUtils.cleanImageView(mPhotoView);
     }
 }

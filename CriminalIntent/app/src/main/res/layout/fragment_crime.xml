@@ -14,8 +14,8 @@
         android:text="@string/crime_title_label"
         style="?android:listSeparatorTextViewStyle"/>
     <ImageView android:id="@+id/crime_imageView"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
         android:scaleType="centerInside"
         android:background="@android:color/darker_gray"
         android:cropToPadding="true"/>

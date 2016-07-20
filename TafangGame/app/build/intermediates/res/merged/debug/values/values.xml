@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TafangGame</string>
+    <string name="hello">Hello World, TafangGameActivity!</string>
+    <style name="FullHeightDialog" parent="android:style/Theme.Dialog">
+      	<item name="android:windowNoTitle">true</item>
+      	<item name="android:windowBackground">@drawable/dialog</item>  
+    </style>
+</resources>

@@ -1,0 +1,193 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* .idea/
+* .idea/.name
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/encodings.xml
+* .idea/misc.xml
+* .idea/workspace.xml
+* app/
+* app/build.gradle
+* app/src/
+* app/src/main/
+* app/src/main/AndroidManifest.xml
+* app/src/main/java/
+* app/src/main/java/com/
+* app/src/main/java/com/bn/
+* app/src/main/java/com/bn/tag/
+* app/src/main/java/com/bn/tag/CanOrIndexPic.java
+* app/src/main/java/com/bn/tag/Constant.java
+* app/src/main/java/com/bn/tag/DBUtil.java
+* app/src/main/java/com/bn/tag/DateUtil.java
+* app/src/main/java/com/bn/tag/GameOverView.java
+* app/src/main/java/com/bn/tag/GameView.java
+* app/src/main/java/com/bn/tag/GameViewDrawThread.java
+* app/src/main/java/com/bn/tag/HelpView.java
+* app/src/main/java/com/bn/tag/HighJifenSurfaceView.java
+* app/src/main/java/com/bn/tag/IfGameOverThread.java
+* app/src/main/java/com/bn/tag/MainMenuSurfaceView.java
+* app/src/main/java/com/bn/tag/MusicSurfaceView.java
+* app/src/main/java/com/bn/tag/MyDialogue.java
+* app/src/main/java/com/bn/tag/SelectThread.java
+* app/src/main/java/com/bn/tag/Shell.java
+* app/src/main/java/com/bn/tag/ShellNumThread.java
+* app/src/main/java/com/bn/tag/ShellThread.java
+* app/src/main/java/com/bn/tag/ShuijingThread.java
+* app/src/main/java/com/bn/tag/SingleGoJianta.java
+* app/src/main/java/com/bn/tag/SingleJianta.java
+* app/src/main/java/com/bn/tag/TafangGameActivity.java
+* app/src/main/java/com/bn/tag/Target.java
+* app/src/main/java/com/bn/tag/TargetNumThread.java
+* app/src/main/java/com/bn/tag/TargetThread.java
+* app/src/main/java/com/bn/tag/TimeThread.java
+* app/src/main/java/com/bn/tag/WelcomeView.java
+* app/src/main/res/
+* app/src/main/res/.DS_Store
+* app/src/main/res/drawable-hdpi/
+* app/src/main/res/drawable-hdpi/.DS_Store
+* app/src/main/res/drawable-hdpi/icon.png
+* app/src/main/res/drawable-ldpi/
+* app/src/main/res/drawable-ldpi/.DS_Store
+* app/src/main/res/drawable-ldpi/icon.png
+* app/src/main/res/drawable-mdpi/
+* app/src/main/res/drawable-mdpi/icon.png
+* app/src/main/res/drawable-nodpi/
+* app/src/main/res/drawable-nodpi/b01.png
+* app/src/main/res/drawable-nodpi/b02.png
+* app/src/main/res/drawable-nodpi/b03.png
+* app/src/main/res/drawable-nodpi/b04.png
+* app/src/main/res/drawable-nodpi/b05.png
+* app/src/main/res/drawable-nodpi/b06.png
+* app/src/main/res/drawable-nodpi/b07.png
+* app/src/main/res/drawable-nodpi/b08.png
+* app/src/main/res/drawable-nodpi/b09.png
+* app/src/main/res/drawable-nodpi/b10.png
+* app/src/main/res/drawable-nodpi/b11.png
+* app/src/main/res/drawable-nodpi/b12.png
+* app/src/main/res/drawable-nodpi/back.png
+* app/src/main/res/drawable-nodpi/backmusicoff.png
+* app/src/main/res/drawable-nodpi/backmusicon.png
+* app/src/main/res/drawable-nodpi/biao1.png
+* app/src/main/res/drawable-nodpi/biao2.png
+* app/src/main/res/drawable-nodpi/blood.png
+* app/src/main/res/drawable-nodpi/c01.png
+* app/src/main/res/drawable-nodpi/c02.png
+* app/src/main/res/drawable-nodpi/c03.png
+* app/src/main/res/drawable-nodpi/c04.png
+* app/src/main/res/drawable-nodpi/c05.png
+* app/src/main/res/drawable-nodpi/c06.png
+* app/src/main/res/drawable-nodpi/c07.png
+* app/src/main/res/drawable-nodpi/c08.png
+* app/src/main/res/drawable-nodpi/c09.png
+* app/src/main/res/drawable-nodpi/c10.png
+* app/src/main/res/drawable-nodpi/c11.png
+* app/src/main/res/drawable-nodpi/c12.png
+* app/src/main/res/drawable-nodpi/caidan.png
+* app/src/main/res/drawable-nodpi/caidanbig.png
+* app/src/main/res/drawable-nodpi/cando.png
+* app/src/main/res/drawable-nodpi/canlocate.png
+* app/src/main/res/drawable-nodpi/d0.png
+* app/src/main/res/drawable-nodpi/d01.png
+* app/src/main/res/drawable-nodpi/d02.png
+* app/src/main/res/drawable-nodpi/d03.png
+* app/src/main/res/drawable-nodpi/d04.png
+* app/src/main/res/drawable-nodpi/d05.png
+* app/src/main/res/drawable-nodpi/d06.png
+* app/src/main/res/drawable-nodpi/d07.png
+* app/src/main/res/drawable-nodpi/d08.png
+* app/src/main/res/drawable-nodpi/d09.png
+* app/src/main/res/drawable-nodpi/d1.png
+* app/src/main/res/drawable-nodpi/d10.png
+* app/src/main/res/drawable-nodpi/d11.png
+* app/src/main/res/drawable-nodpi/d12.png
+* app/src/main/res/drawable-nodpi/d2.png
+* app/src/main/res/drawable-nodpi/d3.png
+* app/src/main/res/drawable-nodpi/d4.png
+* app/src/main/res/drawable-nodpi/d5.png
+* app/src/main/res/drawable-nodpi/d6.png
+* app/src/main/res/drawable-nodpi/d7.png
+* app/src/main/res/drawable-nodpi/d8.png
+* app/src/main/res/drawable-nodpi/d9.png
+* app/src/main/res/drawable-nodpi/dazhao.png
+* app/src/main/res/drawable-nodpi/dialog.9.png
+* app/src/main/res/drawable-nodpi/dukea.png
+* app/src/main/res/drawable-nodpi/dukeb.png
+* app/src/main/res/drawable-nodpi/flower01.png
+* app/src/main/res/drawable-nodpi/gameover.png
+* app/src/main/res/drawable-nodpi/gang.png
+* app/src/main/res/drawable-nodpi/gonglu.png
+* app/src/main/res/drawable-nodpi/help.png
+* app/src/main/res/drawable-nodpi/home.png
+* app/src/main/res/drawable-nodpi/icon.png
+* app/src/main/res/drawable-nodpi/jianta.png
+* app/src/main/res/drawable-nodpi/jianta1.png
+* app/src/main/res/drawable-nodpi/jifenbackground.png
+* app/src/main/res/drawable-nodpi/mainbackground.png
+* app/src/main/res/drawable-nodpi/money.png
+* app/src/main/res/drawable-nodpi/musicbackground.png
+* app/src/main/res/drawable-nodpi/select.png
+* app/src/main/res/drawable-nodpi/shengming.png
+* app/src/main/res/drawable-nodpi/shengming01.png
+* app/src/main/res/drawable-nodpi/shidishu.png
+* app/src/main/res/drawable-nodpi/shuijing.png
+* app/src/main/res/drawable-nodpi/shuijingcover.png
+* app/src/main/res/drawable-nodpi/tree01.png
+* app/src/main/res/drawable-nodpi/tree02.png
+* app/src/main/res/drawable-nodpi/tubiao.png
+* app/src/main/res/drawable-nodpi/yinxiaooff.png
+* app/src/main/res/drawable-nodpi/yinxiaoon.png
+* app/src/main/res/layout/
+* app/src/main/res/layout/.DS_Store
+* app/src/main/res/layout/dialog_name_input.xml
+* app/src/main/res/layout/main.xml
+* app/src/main/res/raw/
+* app/src/main/res/raw/.DS_Store
+* app/src/main/res/raw/background.mid
+* app/src/main/res/raw/explode.ogg
+* app/src/main/res/values/
+* app/src/main/res/values/strings.xml
+* app/src/main/res/values/styles.xml
+* build.gradle
+* default.properties
+* gradle/
+* gradle/wrapper/
+* gradle/wrapper/gradle-wrapper.jar
+* gradle/wrapper/gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* settings.gradle
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

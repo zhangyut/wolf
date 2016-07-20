@@ -47,7 +47,7 @@ public class GameActivity extends Activity {
     int currScore;
 	int highestScore;
     SQLiteDatabase sld;
-    Handler myHandler = new Handler(){//�������SurfaceView���͵���Ϣ
+    Handler myHandler = new Handler(){
         public void handleMessage(Message msg) {
         	switch(msg.what)
         	{

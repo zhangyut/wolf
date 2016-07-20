@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zdns/work/wolf/TafangGame/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="41b445f5b416f54b0512304de435906fb88a2896">
+        <dex dex="/Users/zdns/work/wolf/TafangGame/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_4f7a60ec45feb6a99f324ea430ea2cccd9a6240a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/zdns/work/wolf/TafangGame/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="45f2d57bff98e9575d4c0584676d32a8c0d06160">
+        <dex dex="/Users/zdns/work/wolf/TafangGame/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_5ff9cb191e1f8b653e14b8be745137e8a4f59a5e/classes.dex" />
+    </item>
+
+</items>

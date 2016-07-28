@@ -6,65 +6,65 @@ import android.graphics.Bitmap;
 public class Constant 
 {
 	public static float RATE = 10;
-	public static boolean DRAW_THREAD_FLAG=true;//�����̹߳�����־λ
-	public static boolean START_SCORE=false;//��ʼ�Ƿֱ�־λ 
+	public static boolean DRAW_THREAD_FLAG=true;
+	public static boolean START_SCORE=false;
 	
-	public static final float TIME_STEP = 2f/60.0f;//ģ��ĵ�Ƶ��   
-	public static final int ITERA = 10;//����Խ��ģ��Լ��ȷ��������Խ��   
+	public static final float TIME_STEP = 1f/60.0f;
+	public static final int ITERA = 10;
 	
-	public static int SCREEN_WIDTH;  //��Ļ���
-	public static int SCREEN_HEIGHT; //��Ļ�߶�	
+	public static int SCREEN_WIDTH;
+	public static int SCREEN_HEIGHT;
 	   
-	public static float SCREEN_WIDTH_STANDARD=854;  //��Ļ��׼���	
-	public static float SCREEN_HEIGHT_STANDARD=480;  //��Ļ��׼�߶�	
+	public static float SCREEN_WIDTH_STANDARD=854;
+	public static float SCREEN_HEIGHT_STANDARD=480;
 	
-	public static float xMainRatio;//X���ű���	
-	public static float yMainRatio;//Y���ű���
+	public static float xMainRatio;
+	public static float yMainRatio;
 	
-	//MainMenuDrawThread��TJThread�̵߳ı�־λ
+
 	public static boolean MAIN_DRAW_THREAD_FLAG=false;
 	public static boolean TJ_CONTROL_FLAG=false;
 	
-	//����ƫ����
+
 	public static float xOffset=0;
 	public static float yOffset=0;
 	
-	//�������
+
 	public static float CJ_WIDTH=2000;
 	
-	//�÷�
+
 	public static int SCORE=0;
 	
-	//Ԥ���ص�ͼƬID�����б�
+
 	public static int[] PIC_ID=
 	{
-		R.drawable.ground,//0-����
-		R.drawable.ls_zy,//1-���۾�������
-		R.drawable.xm,//2-Сè   
-		R.drawable.wood_hen,//3-��ľͷ   
-		R.drawable.wood_hen_1,//4-��ľͷ
-		R.drawable.wood_hen_2,//5-��ľͷ
-		R.drawable.stone_shu,//6-��ʯͷ
-		R.drawable.ice_hen,//7-�����
-		R.drawable.ice_hen_1,//8-�����
-		R.drawable.ice_hen_2,//9-�����
-		R.drawable.ice_hen_3,//10-�����
-		R.drawable.ice_shu,//11-������
-		R.drawable.ice_shu_1,//12-������ 
-		R.drawable.ice_shu_2,//13-������
-		R.drawable.ice_shu_3,//14-������
-		R.drawable.bottom_left_ntz,//15-������̨��
-		R.drawable.bottom_right_ntz,//16-������̨��
-		R.drawable.bg,//17-�����ܱ���
-		R.drawable.stone_hen,//18-��ʯͷ
-		R.drawable.wood_shu,//19-��ֱľͷ
-		R.drawable.wood_shu_1,//20-��ֱľͷ
-		R.drawable.wood_shu_2,//21-��ֱľͷ
-		R.drawable.dg,//22-����
-		R.drawable.ls_by,//23-��������
-		R.drawable.pj,//24-Ƥ��
-		R.drawable.c_xd,//25-С��
-		R.drawable.c_dd,//26-����ǿ׳�Ĳ�
+		R.drawable.ground,
+		R.drawable.ls_zy,
+		R.drawable.xm,
+		R.drawable.wood_hen,
+		R.drawable.wood_hen_1,
+		R.drawable.wood_hen_2,
+		R.drawable.stone_shu,
+		R.drawable.ice_hen,
+		R.drawable.ice_hen_1,
+		R.drawable.ice_hen_2,
+		R.drawable.ice_hen_3,
+		R.drawable.ice_shu,
+		R.drawable.ice_shu_1,
+		R.drawable.ice_shu_2,
+		R.drawable.ice_shu_3,
+		R.drawable.bottom_left_ntz,
+		R.drawable.bottom_right_ntz,
+		R.drawable.bg,
+		R.drawable.stone_hen,
+		R.drawable.wood_shu,
+		R.drawable.wood_shu_1,
+		R.drawable.wood_shu_2,
+		R.drawable.dg,
+		R.drawable.ls_by,
+		R.drawable.pj,
+		R.drawable.c_xd,
+		R.drawable.c_dd,
 	};
 	//Ԥ���ذ�ɫ����ͼƬID�����б�
 	public static int[] NUM_BS_ID=    
@@ -294,7 +294,6 @@ public class Constant
 	//��ͼ���������
 	public static BodyType[][] typeA=
 	{
-		//��һ�ص���ͼ��������
 		{
 			BodyType.DM,BodyType.HNTZ,BodyType.HNTZ,
 			BodyType.ST,BodyType.XM,BodyType.BK,BodyType.MT,BodyType.ST,		
@@ -303,7 +302,6 @@ public class Constant
 			BodyType.ST,BodyType.ST,BodyType.ST,BodyType.ST,BodyType.ST,
 			BodyType.MT,BodyType.MT,BodyType.BK,
 		},
-		//�ڶ��ص���ͼ��������
 		{
 			BodyType.DM,BodyType.HNTZ,BodyType.HNTZ,
 			BodyType.BK,BodyType.XM,BodyType.MT,BodyType.BK,BodyType.MT,BodyType.ST,
@@ -311,7 +309,6 @@ public class Constant
 			BodyType.ST,BodyType.ST,BodyType.ST,BodyType.ST,BodyType.ST,
 			BodyType.MT,BodyType.MT,BodyType.BK,
 		},
-		//�����ص���ͼ��������
 		{
 			BodyType.DM,BodyType.HNTZ,
 			BodyType.ST,BodyType.ST,BodyType.XM,BodyType.XM,
@@ -319,11 +316,9 @@ public class Constant
 			BodyType.ST
 		}
 	};
-	
-	//��ͼ�����ʼ�ٶ��б�(X�����ң�Y������)
+
 	public static float[][][] SPEED=
 	{
-		//��һ�ص���ͼ�����ʼ�ٶ�
 		{
 			{0,0},{0,0},{0,0},
 			{0,0},{0,0},{0,0},{0,0},{0,0},
@@ -332,7 +327,6 @@ public class Constant
 			{0,0},{0,0},{0,0},{0,0},{0,0},
 			{0,0},{0,0},{0,0}
 		},
-		//�ڶ��ص���ͼ�����ʼ�ٶ�
 		{
 			{0,0},{0,0},{0,0},
 			{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},
@@ -340,7 +334,6 @@ public class Constant
 			{0,0},{0,0},{0,0},{0,0},{0,0},
 			{0,0},{0,0},{0,0}
 		},
-		//�����ص���ͼ�����ʼ�ٶ�
 		{
 			{0,0},{0,0},
 			{0,0},{0,0},{0,0},{0,0},
@@ -348,11 +341,9 @@ public class Constant
 			{0,0}
 		}
 	};
-	
-	//��ͼ����ĳ�ʼλ��
+
 	public static float[][][] LOCATION=
 	{
-		//��һ����ͼ����ĳ�ʼλ��
 		{
 			{0,440},{760,400},{1000,360},
 			{840,340},{870,360},{920,340},{840,320},{920,300},		
@@ -361,7 +352,6 @@ public class Constant
 			{1340,260},{1240,240},{1240,60},{1340,60},{1240,40},			
 			{1120,300},{1180,300},{1120,280}
 		},
-		//�ڶ�����ͼ����ĳ�ʼλ��
 		{
 			{0,440},{760,400},{1000,400},
 			{820,340},{850,360},{900,340},{820,320},{860,300},{940,340},
@@ -369,7 +359,6 @@ public class Constant
 			{1340,260},{1240,240},{1240,60},{1340,60},{1240,40},
 			{1080,300},{1140,300},{1080,280}
 		},
-		//��������ͼ����ĳ�ʼλ��
 		{
 			{0,440},{760,400},
 			{730,320},{730,300},{920,360},{880,360},
@@ -377,11 +366,9 @@ public class Constant
 			{960,100}
 		}
 	};
-	
-	//��ͼ�����Ŀ��ߴ�
+
 	public static float[][][] SIZE=
 	{
-		//��һ����ͼ�����Ŀ��ߴ�
 		{  
 			{2000,40},{200,40},{240,80},
 			{20,60},{40,40},{20,60},{100,20},{20,20},
@@ -390,7 +377,6 @@ public class Constant
 			{20,180},{120,20},{20,180},{20,180},{120,20},			
 			{20,60},{20,60},{80,20}
 		},
-		//�ڶ�����ͼ�����Ŀ��ߴ�
 		{
 			{2000,40},{200,40},{200,40},
 			{20,60},{40,40},{20,60},{100,20},{20,20},{20,60},
@@ -398,7 +384,6 @@ public class Constant
 			{20,180},{120,20},{20,180},{20,180},{120,20},
 			{20,60},{20,60},{80,20}
 		},
-		//��������ͼ�����Ŀ��ߴ�
 		{
 			{2000,40},{300,40},
 			{20,120},{170,20},{40,40},{40,40},
@@ -406,81 +391,61 @@ public class Constant
 			{20,300}
 		}
 	};
-	   
-	//��ͼ������������б������Ķ���Ҫ˳ʱ��	��   
+
 	public static float[][][][] STONE_VERTEX=
 	{
-		//��һ����ͼ������������б������Ķ���Ҫ˳ʱ��	��   
 		{
-			//����
 			{
 		    	{0,0},{2000,0},{2000,40},{0,40}
 			},
-		    //������̨�� 
 			{ 
 				{20,0},{200,0},{200,40},{0,40}
 			},
-			//�Ҳ����̨��
 			{
 				{0,0},{220,0},{240,80},{0,80}
 			},
-			//�������е�ʯ��
 			{
 				{0,0},{20,0},{20,60},{0,60}
 			},
-			//���Сè
 		    {
 		    	{0,0},{38,0},{40,20},{32,36},{6,36},{0,20}
-		    },	 
-			//�������еı���
+		    },
 		    {
 				{0,0},{20,0},{20,60},{0,60}
 		    },
-		    //���������Ϸ���ľ��
 		    {
 				{0,0},{100,0},{100,20},{0,20}
 		    },
-		    //����Ϸ����ŵ�ʯͷ
 		    {
 		    	{0,0},{20,0},{20,20},{0,20}
-		    },		    
-		    //�Ҳ�����е�ʯ��
+		    },
 			{
 				{0,0},{20,0},{20,60},{0,60}
 			},
-			//�Ҳ�Сè
 		    {
 				{0,0},{38,0},{40,20},{32,36},{6,36},{0,20}
-		    },	 
-			//�Ҳ�����е�ľ��  
+		    },
 		    {
 				{0,0},{20,0},{20,60},{0,60}
 		    },
-		    //�Ҳ�������Ϸ��ı���
 		    {
 				{0,0},{100,0},{100,20},{0,20}
 		    },
-		    //�Ҳ��Ϸ����ŵ�ʯͷ
 		    {
 		    	{0,0},{20,0},{20,20},{0,20}
 		    },
-		    //����Ϸ����ŵ�ʯͷ
 		    {
 		    	{0,0},{20,0},{20,20},{0,20}
 		    },
-		    //�Ҳ��Ϸ����ŵ�ʯͷ
 		    {
 		    	{0,0},{20,0},{20,20},{0,20}
 		    },
-		    //����Ϸ��м���ŵ�ʯͷ
 		    {
 		    	{0,0},{20,0},{20,20},{0,20}
 		    },
-		    //�Ҳ��Ϸ��м���ŵ�ʯͷ
 		    {
 		    	{0,0},{20,0},{20,20},{0,20}
 		    },
-		    //�Ҳ�ʯͷ
 			{
 				{0,0},{20,0},{20,180},{0,180}
 			},

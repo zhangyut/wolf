@@ -22,24 +22,23 @@ import android.view.SurfaceView;
 public class GameView extends SurfaceView implements SurfaceHolder.Callback,ContactListener
 {
 	MyBox2dActivity activity;
-	Paint paint;//����		
-	DrawThread dt;//�����߳�
-    AABB worldAABB;//���� һ��������ײ������   
+	Paint paint;
+	DrawThread dt;
+    AABB worldAABB;
     World world;     
-    Pijin pjc;//Ƥ��
-    String hightScore;//��߷�
-    //���ѡ��ؿ��˵���ȥ������ť���ƽ��ֵ
+    Pijin pjc;
+    String hightScore;
     float x_pj;
-    //�����б�
+
     ArrayList<MyPolygonImg> bl=new ArrayList<MyPolygonImg>();
-    //Ӣ��
+
     MyPolygonImg hero;
-    //�÷��б�
+
     List<Score> scoreList=new ArrayList<Score>();
     
-    //�Ƿ��Ѿ��ͷ���ͷ�ı�־λ
+
     boolean flagSf=false;
-    //��ͷ��ʼλ��
+
     float xst=180*yMainRatio;
     float yst=SCREEN_HEIGHT-DMGD-PIC_ARRAY[22].getHeight();
     final float ysXst=xst;
@@ -52,25 +51,24 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Cont
 		this.loadGameData();
 		this.initContactListener();
 		
-		//�����������ڻص��ӿڵ�ʵ����
+
 		this.getHolder().addCallback(this);
-		//��ʼ������
-		paint = new Paint();//��������
-		paint.setAntiAlias(true);//�򿪿����
-		//���������߳�
+
+		paint = new Paint();
+		paint.setAntiAlias(true);
+
 		dt=new DrawThread(this);
 		dt.start();
 		
 	} 
 	
-	//������Ϸ����
+
 	public void loadGameData()
 	{
 		worldAABB = new AABB();   
         
-        //���½磬����Ļ�����Ϸ�Ϊ ԭ�㣬��������ĸ��嵽����Ļ�ı�Ե�Ļ�����ֹͣģ��   
         worldAABB.lowerBound.set(0f,-100.0f);
-        worldAABB.upperBound.set(200.0f, 100.0f);//ע������ʹ�õ�����ʵ����ĵ�λ   
+        worldAABB.upperBound.set(200.0f, 100.0f);
            
         Vec2 gravity = new Vec2(0.0f,20.0f);
         boolean doSleep = true;     
@@ -400,6 +398,14 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Cont
 
 	@Override
 	public void preSolve(Contact contact, Manifold manifold) {
+		BodySearchUtil.doAction(
+				GameView.this,
+				contact.getFixtureA().getBody(),
+				contact.getFixtureB().getBody(),
+				bl,
+				manifold.points[0].localPoint.x*RATE,
+				manifold.points[0].localPoint.y*RATE
+		);
 
 	}
 

@@ -7,12 +7,12 @@ import android.graphics.Paint;
 public class Taj 
 {
 	int tajIndex;
-	float xoffset;//xλ��
-	float yoffset;//yλ��
-	float vx;//�ٶ�   
+	float xoffset;
+	float yoffset;
+	float vx;
 	float vy;
 	int timeSpan=0;
-	float maxOffset=1f;//��ͷ��ʼ�Ŀ��
+	float maxOffset=1f;
 	public Taj(int tajIndex,float xoffset,float yoffset,float vx,float vy)
 	{
 		this.tajIndex=tajIndex;
@@ -21,7 +21,7 @@ public class Taj
 		this.vx=vx;
 		this.vy=vy;
 	}
-	//���Ʒ���
+
 	public void drawSelf(Canvas canvas,Paint paint)
 	{
 		float x=xoffset+vx*timeSpan;
@@ -44,7 +44,6 @@ public class Taj
 		} 
 		Matrix m3=new Matrix();
 		m3.setConcat(m1, m2);
-		//�ڷ�Χ֮��Ͳ��ٻ���
 		if(xoffset<0||xoffset>SCREEN_WIDTH||yoffset>SCREEN_HEIGHT)
 		{
 			return;

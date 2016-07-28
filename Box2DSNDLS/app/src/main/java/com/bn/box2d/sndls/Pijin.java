@@ -11,13 +11,13 @@ public class Pijin
 		{54,20},
 		{93,20}
 	};
-	//�����X����
+
 	float lx;
-	//�����Y����
+
 	float ly;
-	//������˩סƤ���X����
+
 	float dx;
-	//������˩סƤ���Y����
+
 	float dy;
 	static boolean flag=false;
 	public Pijin(float lx,float ly,float dx,float dy)
@@ -36,7 +36,7 @@ public class Pijin
 		degrees[1]=(float) Math.toDegrees(Math.asin(yoffset/degrees[0]));
 		return degrees;
 	}
-	//�Զ���Ļ��Ʒ���
+
 	public void drawSelf(Canvas canvas,Paint paint)
 	{
 		if(lx<150*yMainRatio&&!flag)
@@ -51,14 +51,14 @@ public class Pijin
 			setMatrix(canvas,paint,degrees);
 		}
 	}
-	//���þ������ת
+
 	public void setMatrix(Canvas canvas,Paint paint,float[] degrees)
 	{
-		canvas.save();//���滭��״̬
-		//ƽ�ƾ���
+		canvas.save();
+
 		Matrix m1=new Matrix();
 		m1.setTranslate(lx+PIC_ARRAY[1].getWidth(), ly+PIC_ARRAY[1].getHeight()/2);
-		//��ת����
+
 		Matrix m2=new Matrix();
 		m2.setRotate(degrees[1]);
 		Matrix m3=new Matrix();
@@ -69,6 +69,6 @@ public class Pijin
 		Matrix m5=new Matrix();
 		m5.setConcat(m3, m4);
 		canvas.drawBitmap(PIC_ARRAY[24], m5, paint);
-		canvas.restore();//�ָ�����״̬
+		canvas.restore();
 	}
 }

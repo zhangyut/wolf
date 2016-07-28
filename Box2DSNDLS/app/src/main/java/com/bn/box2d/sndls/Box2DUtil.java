@@ -12,25 +12,24 @@ import static com.bn.box2d.sndls.Constant.*;
 
 
 public class Box2DUtil 
-{	
-	//��������Σ���ͼ��
+{
 	public static MyPolygonImg createPolygonImg
 	(
-		float x,//x����
-		float y,//y����
-	    float[][] vData,//��������
-        boolean isStatic,//�Ƿ�Ϊ��ֹ��
-        World world,//����
-        Bitmap[] bm,//ͼƬ
-        float width,//Ŀ����
-        float height,//Ŀ��߶�
-        BodyType lx,//����
+		float x,
+		float y,
+	    float[][] vData,
+        boolean isStatic,
+        World world,
+        Bitmap[] bm,
+        float width,
+        float height,
+        BodyType lx,
         GameView gv
     )
 	{    
-		//�����������������
+
 		PolygonShape shape = new PolygonShape();
-		//�����ܶ�
+
 		FixtureDef fixtureDef = new FixtureDef();
 		float density = 0;
 		if(isStatic)
@@ -41,9 +40,9 @@ public class Box2DUtil
 		{
 			fixtureDef.setDensity(2.0f);
 		}   
-		//����Ħ��ϵ��
+
 		fixtureDef.setFriction(0.8f);
-		//����������ʧ�ʣ�������
+
 		//这句话没有找到对应的替换语句
 		//shape.dimensions = 0.5f;
 
@@ -56,28 +55,27 @@ public class Box2DUtil
 		}
 		shape.set(vertices, vertices.length);
 		fixtureDef.shape = shape;
-		//����������������   
+
 		BodyDef bodyDef = new BodyDef();   
-		//����λ��
+
 		bodyDef.position.set(x/RATE, y/RATE);   
-		//�������д�������
+
 		Body bodyTemp= world.createBody(bodyDef); 
-		//ָ��������״
+
 		bodyTemp.createFixture(fixtureDef);
-		
 		MyPolygonImg result=null;
 		switch(lx)
         {
-          case MT://ľͷ��
+          case MT:
         	  result=new BodyWood(bodyTemp,bm,width,height,gv);	
           break;
-          case BK://����
+          case BK:
         	  result=new BodyIce(bodyTemp,bm,width,height,gv);	
           break;
-          case XM://Сè
+          case XM:
         	  result=new BodyCat(bodyTemp,bm,width,height,gv);	
           break;
-          default://����
+          default:
         	  result=new MyPolygonImg(bodyTemp,bm,width,height,gv);	
         }
 		return result;

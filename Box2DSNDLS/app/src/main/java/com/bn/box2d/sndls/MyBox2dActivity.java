@@ -17,13 +17,12 @@ enum WhichView{GAME_VIEW,MAIN_MENU_VIEW};
 public class MyBox2dActivity extends Activity 
 {   
 	WhichView curr;
-	MainMenuView mmv;//���˵�����
-	GameView gv;//��Ϸ����
-	//��ȡSharedPreferences
+	MainMenuView mmv;
+	GameView gv;
+
 	SharedPreferences sp;
-	//��SharedPreferences��д������
     SharedPreferences.Editor editor;
-    //������
+
     SoundUtil soundutil;
 	HashMap<Integer, Integer> soundPoolMap;
 	Handler hd=new Handler()

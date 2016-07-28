@@ -8,9 +8,9 @@ import java.util.List;
 public class TJThread extends Thread
 {
 	static float lsxoffset;
-	static float lsyoffset;//�����Yλ��
-	static float vx;//����x������ٶ�
-	static float vy;//����y������ٶ�
+	static float lsyoffset;
+	static float vx;
+	static float vy;
 	int[] num={4,5,8,4,5,5,4,5,5,4,5,8};
 	int index;
 	MainMenuView tjview;
@@ -24,7 +24,6 @@ public class TJThread extends Thread
 	{
 		while(TJ_CONTROL_FLAG)
 		{
-			//�õ�λ�á��ٶ��Լ�����ֵ
 			lsxoffset=(float) (SCREEN_WIDTH/2*Math.random());
 			lsyoffset=SCREEN_HEIGHT;
 			vx=(float) (25*Math.random())*yMainRatio;

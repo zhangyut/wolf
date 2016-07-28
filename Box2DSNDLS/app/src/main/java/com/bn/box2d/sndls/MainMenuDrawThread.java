@@ -5,11 +5,11 @@ import static com.bn.box2d.sndls.Constant.*;
 public class MainMenuDrawThread extends Thread
 {
 	static float syoffset;
-	static float xyoffset;	//����   
-	static float zyoffset;	//����
-	static float yyoffset;	//����
-	static float bdxoffset;//�����λ��    �ݵص�λ��
-	static float bgxoffset;//������λ��
+	static float xyoffset;
+	static float zyoffset;
+	static float yyoffset;
+	static float bdxoffset;
+	static float bgxoffset;
 	MainMenuView mmv;
 	float degrees;
 	public MainMenuDrawThread(MainMenuView tjview)
@@ -23,7 +23,7 @@ public class MainMenuDrawThread extends Thread
 		{
 			bdxoffset+=2f*yMainRatio;
 			bgxoffset+=1f*yMainRatio;
-			mmv.repaint();//���»���
+			mmv.repaint();
 			try
 			{
 				Thread.sleep(SLEEPTIME);
@@ -33,19 +33,19 @@ public class MainMenuDrawThread extends Thread
 				e.printStackTrace();
 			}
 			
-			//����
+
 			if(mmv.flag==1)
 			{  
 				syoffset+=60*yMainRatio;
 				degrees=(float)(Math.toDegrees(syoffset))/1.3f;
 			}
-			//����   
+
 			if(mmv.flag==2)
 			{
 				xyoffset+=60*yMainRatio;
 				degrees=(float)(Math.toDegrees(-xyoffset))/1.3f;
 			}
-			//����
+
 			if(mmv.ckisTouch)
 			{
 				zyoffset+=30*yMainRatio;

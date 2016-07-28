@@ -17,35 +17,35 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 {
 	Paint paint;
 	List<Taj> tlist=new ArrayList<Taj>();
-	int flag;//��ť�ı�־λ
-	boolean isTouch;//���ð�ť�Ƿ񱻰��µı�־λ
-	boolean syisTouch;//���ư�ť�е�������ť�Ƿ񱻰��µı�־λ
-	boolean ckisTouch;//���ư�ť�еĹ�˾��Ϣ�鿴��ť�Ƿ񱻰��µı�־λ
-	boolean szisTouch;//���ư�ť�еķ�����Ϣ�鿴��ť�Ƿ񱻰��µı�־λ
-	boolean isClose;  //�Ƿ�رհ�ť
-	TJThread thd;//���ƶ���ɳ����߳�
-	MainMenuDrawThread mmt;//����ˢ֡�߳�
+	int flag;
+	boolean isTouch;
+	boolean syisTouch;
+	boolean ckisTouch;
+	boolean szisTouch;
+	boolean isClose;
+	TJThread thd;
+	MainMenuDrawThread mmt;
 	MyBox2dActivity activity;
 	String str;
-	boolean degreesFlag=true;//��ת�ı�־λ
+	boolean degreesFlag=true;
 	public MainMenuView(MyBox2dActivity activity)
 	{
 		super(activity);
 		this.activity=activity;
-		//�����������ڻص��ӿڵ�ʵ����
+
 		this.getHolder().addCallback(this);
 		paint=new Paint();
-		paint.setAntiAlias(true);//�򿪿����
+		paint.setAntiAlias(true);
 	}
-	//����    
+
 	public void onDraw(Canvas canvas)
 	{
-		//���Ʊ���
+
 		drawSelf(canvas,paint,PE_ARRAY[0],bgxoffset,0,1);
-		//����ǿ׳�Ĳ�
+
 		drawSelf(canvas,paint,PE_ARRAY[2],bdxoffset,SCREEN_HEIGHT-PE_ARRAY[1].getHeight()-PE_ARRAY[2].getHeight(),0);
 		
-		//���Ʒɵ�����
+
 		if(this.tlist.size()!=0)
 		{
 			float SPEED=1.3f;
@@ -123,13 +123,13 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 			}
 			else
 			{
-				//���Ʊ���
+
 				canvas.drawBitmap(PE_ARRAY[9], LOCALTION_BUTTON[3][0], LOCALTION_BUTTON[3][1]-SET_BACK_CK_OFFSET*yMainRatio, paint);
-				//���Ʒ�����Ϣ�鿴
+
 				canvas.drawBitmap(PE_ARRAY[12], LOCALTION_BUTTON[3][0], LOCALTION_BUTTON[3][1], paint);
-				//���ƹ�˾��Ϣ�鿴
+
 				canvas.drawBitmap(PE_ARRAY[11], LOCALTION_BUTTON[2][0], LOCALTION_BUTTON[2][1], paint);
-				//����������ť
+
 				canvas.drawBitmap(PE_ARRAY[10], LOCALTION_BUTTON[1][0], LOCALTION_BUTTON[1][1], paint);
 				if(syisTouch)
 				{
@@ -139,7 +139,7 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 				degreesFlag=false;
 			}
 		}
-		//���������Ӳ˵�
+
 		if(flag==2)
 		{
 			if(xyoffset<=PE_ARRAY[9].getHeight())
@@ -149,13 +149,13 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 								SCREEN_HEIGHT-PE_ARRAY[1].getHeight()-PE_ARRAY[9].getHeight()+xyoffset, 
 								LOCALTION_BUTTON[1][0]+PE_ARRAY[9].getWidth(), 
 								SCREEN_HEIGHT-PE_ARRAY[1].getHeight());
-				//���Ʊ���
+
 				canvas.drawBitmap(PE_ARRAY[9], LOCALTION_BUTTON[3][0], SCREEN_HEIGHT-PE_ARRAY[1].getHeight()-PE_ARRAY[9].getHeight()+xyoffset, paint);
-				//���Ʒ�����Ϣ�鿴
+
 				canvas.drawBitmap(PE_ARRAY[12], LOCALTION_BUTTON[3][0], SCREEN_HEIGHT-PE_ARRAY[1].getHeight()-PE_ARRAY[9].getHeight()+xyoffset+SET_BACK_CK_OFFSET*yMainRatio, paint);
-				//���ƹ�˾��Ϣ�鿴
+
 				canvas.drawBitmap(PE_ARRAY[11], LOCALTION_BUTTON[2][0], SCREEN_HEIGHT-PE_ARRAY[1].getHeight()-PE_ARRAY[9].getHeight()+xyoffset+PE_ARRAY[11].getHeight(), paint);
-				//����������ť
+
 				canvas.drawBitmap(PE_ARRAY[10], LOCALTION_BUTTON[1][0], SCREEN_HEIGHT-PE_ARRAY[1].getHeight()-PE_ARRAY[9].getHeight()+xyoffset+PE_ARRAY[10].getHeight()*2, paint);
 				if(syisTouch)
 				{
@@ -170,7 +170,7 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 			}
 		}
 		canvas.save();
-		//�������ð�ť
+		//�������ð�
 		canvas.drawBitmap(PE_ARRAY[7], LOCALTION_BUTTON[0][0], LOCALTION_BUTTON[0][1], paint);
 		canvas.drawBitmap(PE_ARRAY[17], m3, paint);
 		canvas.restore();
@@ -202,7 +202,7 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 			}
 		}
 		
-		//���Ʒ����鿴�Ի���  
+		//���Ʒ����鿴�Ի���
 		if(szisTouch)
 		{   
 			//����
@@ -254,7 +254,7 @@ public class MainMenuView extends SurfaceView implements SurfaceHolder.Callback
 		switch(currentNUm)
 		{
 			case MotionEvent.ACTION_DOWN:
-				//�������ð�ť
+
 				if(x>LOCALTION_BUTTON[0][0]&&x<LOCALTION_BUTTON[0][0]+LOCALTION_BUTTON[0][2]&&
 				   y>LOCALTION_BUTTON[0][1]&&y<LOCALTION_BUTTON[0][1]+LOCALTION_BUTTON[0][3])
 				{

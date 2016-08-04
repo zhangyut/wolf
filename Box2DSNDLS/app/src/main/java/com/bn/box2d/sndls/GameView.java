@@ -1,5 +1,4 @@
 package com.bn.box2d.sndls;
-import static com.bn.box2d.sndls.Constant.*;
 
 import java.util.ArrayList;
 import java.util.List;

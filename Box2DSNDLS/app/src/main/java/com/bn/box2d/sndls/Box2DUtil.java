@@ -8,7 +8,6 @@ import org.jbox2d.dynamics.FixtureDef;
 import org.jbox2d.dynamics.World;
 
 import android.graphics.Bitmap;
-import static com.bn.box2d.sndls.Constant.*;
 
 
 public class Box2DUtil 
@@ -23,7 +22,6 @@ public class Box2DUtil
         Bitmap[] bm,
         float width,
         float height,
-        BodyType lx,
         GameView gv
     )
 	{    
@@ -64,15 +62,16 @@ public class Box2DUtil
 
 		bodyTemp.createFixture(fixtureDef);
 		MyPolygonImg result=null;
-		switch(lx)
+		int m_type = 0;
+		switch(m_type)
         {
-          case MT:
+          case 0:
         	  result=new BodyWood(bodyTemp,bm,width,height,gv);	
           break;
-          case BK:
+          case 1:
         	  result=new BodyIce(bodyTemp,bm,width,height,gv);	
           break;
-          case XM:
+          case 2:
         	  result=new BodyCat(bodyTemp,bm,width,height,gv);	
           break;
           default:
